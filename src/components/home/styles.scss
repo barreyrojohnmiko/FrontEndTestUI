@@ -1,0 +1,29 @@
+.home-container {
+  .notification-container {
+    margin: 4px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px 0 15px;
+
+    .notif-icon {
+      font-size: 25px;
+      color: #ffd703;
+    }
+
+    .notif-label {
+      font-size: 14px;
+      color: #8fd8ff;
+    }
+  }
+
+  .feature-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+}
