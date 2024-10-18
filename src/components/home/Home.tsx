@@ -2,7 +2,7 @@ import './styles.scss';
 
 import { useState } from 'react';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Divider, Typography } from '@mui/material';
 
 import CarouselPanelView from '../../views/carouselPanel/CarouselPanel';
 import FooterView from '../../views/footer/Footer';
@@ -25,12 +25,11 @@ import { useSwipeable } from 'react-swipeable';
 
 const images = [bannerImg1, bannerImg2, bannerImg3];
 const menuItems = [
-  { id: 1, icon: SearchIcon, label: 'Search' },
-  { id: 2, icon: WhatshotIcon, label: 'Start' },
-  { id: 3, icon: FiberNewIcon, label: 'New' },
-  { id: 4, icon: CasinoIcon, label: 'Slots' },
-  { id: 5, icon: Person3Icon, label: 'Live' },
-  { id: 6, icon: CelebrationIcon, label: 'Jackpots' },
+  { id: 1, icon: WhatshotIcon, label: 'Start' },
+  { id: 2, icon: FiberNewIcon, label: 'New' },
+  { id: 3, icon: CasinoIcon, label: 'Slots' },
+  { id: 4, icon: Person3Icon, label: 'Live' },
+  { id: 5, icon: CelebrationIcon, label: 'Jackpots' },
 ];
 
 const HomeComponent = () => {
@@ -70,13 +69,21 @@ const HomeComponent = () => {
         </Box>
 
         <Box className="feature-container">
-          {menuItems.map((item) => (
-            <NavigationMenuView
-              key={item.id}
-              icon={item.icon}
-              label={item.label}
-            />
-          ))}
+          <Box className="search-container">
+            <NavigationMenuView icon={SearchIcon} label="Search" />
+
+            <Divider orientation="vertical" flexItem  />
+          </Box>
+
+          <Box className="feature-sub-container">
+            {menuItems.map((item) => (
+              <NavigationMenuView
+                key={item.id}
+                icon={item.icon}
+                label={item.label}
+              />
+            ))}
+          </Box>
         </Box>
 
         <FooterView />

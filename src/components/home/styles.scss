@@ -21,9 +21,21 @@
   .feature-container {
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-items: center;
+
+    .search-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .feature-sub-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      overflow: auto;
+      padding: 0 10px 0 5px;
+    }
   }
 }

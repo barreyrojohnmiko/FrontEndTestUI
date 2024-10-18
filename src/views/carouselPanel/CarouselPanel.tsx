@@ -17,9 +17,6 @@ const CarouselPanelView = ({
         className="carousel-img"
         sx={{
           backgroundImage: `url(${carouselImg})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
       />
     </Box>
